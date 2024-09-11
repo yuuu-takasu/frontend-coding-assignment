@@ -1,46 +1,67 @@
-# Getting Started with Create React App
+## 課題：ボタンコンポーネントの実装
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+アプリケーション内で共通して使用するボタンコンポーネントを実装してください
 
-## Available Scripts
+### 仕様
 
-In the project directory, you can run:
+- ボタンのパターンとしては次の3つがあります。
+    
+    ![screenshot01.png](./docs/img/screenshot01.png)
+    
+    - ボタンのラベルはテキストのみの場合と、左右にアイコンが付く場合があります。
+- ボタンには次の4種類の状態があります。
+    - 非活性
+    - ローディング中
+    - ホバー時
+    - フォーカス時
+- ボタンのラベルは外部から指定することができます。
+- ボタンのクリック時に発火する関数は外部から指定することができます。
+- ボタンの色や形は外部から指定することはできません。
+- ボタンの高さ、横幅は親コンポーネントから制御できます。
+- フォーム内で使用することもあるため、ボタンのtypeを `submit`に指定することができます。
+- ボタンにURLを渡したときは、ボタンの見た目のまま、リンクとして振る舞います。
+    - リンクとして振る舞うときは、リンクを開く先として `target` を指定することができます
+- ボタンコンポーネントを使う側は宣言的に記述できるようにしてください。
 
-### `npm start`
+実装されたボタンを全パターン見ることができるページを作成してください。
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 制約
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Must**
 
-### `npm test`
+- [React](https://reactjs.org/) または [Vue.js](https://vuejs.org/index.html)を用いて実装すること（バージョンはできるだけ最新版を使用）
+    - Nuxt.jsやNext.jsなどこれらを内包したフレームワークでも可
+- PC/スマートフォン表示に対応すること(レスポンシブデザイン対応)
+    - 実機ではなく、Google Chromeの検証ツールを用いた確認でよい
+- styleは自分で記述し、CSS・UIフレームワークなどは使用しないこと
+    - css-in-jsやcss-modules, Zero Runtime CSS, Sassなどの利用は可
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Prefer**
 
-### `npm run build`
+- TypeScriptで記述する
+- linterやformatterを適切に設定する
+    - linterにはESLint、formatterにはPrettierを使用する
+- テストケース/テストコードを作成する（テストツールは任意）
+- テスト実行時にエラーが発生しない
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 課題のレビュー観点
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 仕様を満たしていること
+- フロントエンドの実装力
+- CSSの記述力
+- 設計
+- 変数の命名規則
+- チーム開発を意識できていること
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 注意事項
 
-### `npm run eject`
+- ソースコードはGitで管理し、作成したソースコードはGitHubにアップロードしてください
+- セキュリティを考慮してコードを記述してください
+- Gitコミットメッセージやコミット粒度、ドキュメンテーション等もレビュー対象となります
+- Google Chrome最新版で正しく動くことを確認してください
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 課題の提出方法
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+GitHubのpublicリポジトリのURLと、実装したWebアプリのURLの提出をお願いします。実装したWebアプリはNetlify / GitHub Pages / Firebase hosting / Vercel / Cloudflare Pages等のホスティングサービスにデプロイし、インターネット経由で閲覧できる状態にして共有してください。
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+作業全てにかかった時間も併せてお知らせください。
