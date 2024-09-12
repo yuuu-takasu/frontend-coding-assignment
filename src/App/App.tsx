@@ -1,5 +1,5 @@
-import './App.css';
-import ButtonDemo from './features/ButtonDemo';
+import "./App.css";
+import ButtonDemo from "./features/ButtonDemo";
 
 function App() {
   return (
